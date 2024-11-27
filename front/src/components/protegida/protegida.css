@@ -1,0 +1,93 @@
+@media (max-width: 1033px) {
+  .novedad-section {
+      flex-direction: column;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      
+  }
+}
+.novedades-section {
+  padding: 20px;
+  background-color: #eeeeee;
+  
+  
+}
+
+.novedades-list {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+.novedad-item {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.novedad-item h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.novedad-item p {
+  margin: 10px 0;
+}
+
+.novedad-item span {
+  color: #888;
+  font-size: 0.9em;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #b1b3b4;
+  color: #eeeeee;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0c0c0c;
+}
+
+.novedad-contenido {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  
+}
+
+.expandido {
+  height: auto; 
+  overflow: hidden;
+  padding: 10px 0;
+ 
+}
+
+
+  
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redes {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f7f5f5;
+  width: 300px;
+  height: 410px;
+  text-align: center;
+  left: 70%;
+ margin: 20px;
+
+}

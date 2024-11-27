@@ -1,0 +1,9 @@
+.inicio, .tienda, .contacto {
+    text-decoration: none; 
+    color: #fff; 
+  }
+  
+  .inicio:hover, .tienda:hover, .contacto:hover {
+    text-decoration: none; 
+    color: #ccc; 
+  }
