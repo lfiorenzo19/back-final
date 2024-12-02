@@ -2,6 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo');
 const cors = require('cors');
 const session = require('express-session'); 
 const productsRoutes = require('./routes/productRoutes');
@@ -19,6 +20,11 @@ app.use('/api/mail', mailRoutes);
 
 // Configuración de la sesión 
 app.use(session({
+  store: MongoStore.create({
+    mongoUrl: mongoURI, // Usando la variable de entorno
+    ttl: 60 * 60 * 24,  // Tiempo de vida de la sesión en segundos (1 día)
+  }),
+
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true, 
