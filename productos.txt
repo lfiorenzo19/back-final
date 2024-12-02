@@ -1,0 +1,22 @@
+
+    "nombre": "Chaqueta de snowboard. 3 en 1.  Abrigo de invierno",
+    "precio": 256990,
+    "descripcion": "Material: 100% poliéster; Tejido del forro desmontable: forro polar cálido. Forro funcional desmontable: agradable al tacto, ligero y cálido. Chaqueta con forro de cuello alto que te mantiene abrigado en climas fríos. Bolsillos con cremallera. Capucha ajustable y desmontable y puño ajustable para evitar el viento y el agua, para un ajuste cómodo. El diseño desmontable 3 en 1 brinda más comodidad, puede separar el abrigo y el interior según sea necesario, o usarlos juntos.",
+    "categoria": "Ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+
+
+    "nombre": "Chaqueta motociclista de piel sintética. Capucha extraíble, para mujer",
+    "precio": 290950,
+    "descripcion": " Material de piel sintética para estilo y comodidad. Dos bolsillos delanteros, chaqueta de piel sintética estilo mezclilla con capucha.Detalle de botones cintura / Detalle de costuras en los costados",
+    "categoria": "Ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+
+
+    "nombre": "Chaqueta impermeable para mujer. Rompeviento. Impermeables, a rayas",
+    "precio": 390990,
+    "descripcion": "Manga larga con capucha, diseño de cintura con cordón ajustable. Cierre frontal con botón y cremallera, totalmente forrado a rayas. Dos bolsillos laterales de gran tamaño.Capucha forrada de algodón adjunta con Los cordones ajustables.",
+    "categoria": "Ropa de mujer",
+    "imagen": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+
+

@@ -1,72 +1,40 @@
-import { useState } from "react";
+import { useState } from 'react';
+import axios from 'axios';
 import "./formulario.css";
 
 const Formulario = () => {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
-  const [correo, setCorreo] = useState("");
-  const [consulta, setConsulta] = useState("");
-  const [enviado, setEnviado] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setEnviado(true);
-    console.log("Formulario enviado:", { nombre, apellido, correo, consulta });
+    try {
+      await axios.post('http://localhost:5000/api/mail/send-mail', formData);
+
+      alert('Correo enviado con éxito');
+    } catch (error) {
+      //console.error('Error:', error.response.data.error);
+      alert('Error al enviar el correo');
+    }
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <label>
-        Nombre
-        <input
-          type="text"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-        />
-      </label>
-
-      <label>
-        Apellido
-        <input
-          type="text"
-          value={apellido}
-          onChange={(e) => setApellido(e.target.value)}
-        />
-      </label>
-
-      <label>
-        Correo Electrónico{" "}
-        <input
-          type="email"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-        />
-      </label>
-
-      <label>
-        Envianos tu Consulta{" "}
-        <input
-          type="text"
-          value={consulta}
-          onChange={(e) => setConsulta(e.target.value)}
-        />
-      </label>
-
-      <button className="BotonForm" type="submit">
-        Enviar
-      </button>
-      {enviado && <p style={{
-      backgroundColor:"black",
-      color: "white",
-      height:"3rem",
-      alignContentContent: "center",
-      fontFamily:"fantasy",
-      fontSize: 24,
-      letterSpacing: "2px",
-      boxShadow:"0px 0px 10px #ffffff",
-      borderRadius:"10px",
-      margin:"0.5px"
-      }} >Formulario Enviado</p>}
+    <form className='form' onSubmit={handleSubmit}>
+      
+      <label> Nombre <input name="name" type="text" placeholder="Nombre" onChange={handleChange} /></label>
+      <label> Correo Electrónico <input name="email" type="email" placeholder="Email" onChange={handleChange} /></label>
+      <label>Envianos tu mensaje <textarea name="message" placeholder="Mensaje" onChange={handleChange} /></label>
+      <button className='BotonForm' type="submit">Enviar</button>
     </form>
   );
 };

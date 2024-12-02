@@ -1,4 +1,5 @@
 
+
 import './protegida.css';
 import React, { useState } from 'react';
 import Fondo2 from "../../assets/images/fondo2.jpg";
@@ -6,31 +7,31 @@ import Fondo2 from "../../assets/images/fondo2.jpg";
 const novedades = [
   {
     id: 1,
-    titulo: "Con tu compra Mayor a $50000 obten el 10% de descuento",
-    descripcion: "PROMO VALIDA HASTA 30 DE NOVIEMBRE",
-    fecha: "24 de Noviembre de 2024",
+    titulo: "Comprando $50000 obtené el 10% de descuento",
+    descripcion: "Válido hasta 30/11/2024",
+    fecha: "24/11/2024",
     contenido: "...",
 
   },
   {
     id: 2,
-    titulo: "Participa en el sorteo por cupones de descuento hasta el 50%",
-    descripcion: "valido solo en Argentina ",
-    fecha: "24 de Noviembre de 2024",
-    contenido: "condiciones "
+    titulo: "Participando en el sorteo hasta 50% OFF",
+    descripcion: "Válido solo en Argentina ",
+    fecha: "15/11/2024",
+    contenido: "... "
   },
   {
     id: 3,
     titulo: "Obtén una Membresia vip",
     descripcion: " ¿Cómo obtenerla? ",
-    fecha: "24 de Noviembre de 2024",
+    fecha: "10/11/2024",
     contenido: "..."
   },
   {
     id: 4,
     titulo: "Envio Gratuito",
     descripcion: " ¿Cómo obtenerlo? ",
-    fecha: "24 de Noviembre de 2024",
+    fecha: "5 de Noviembre de 2024",
     contenido: "..."
   },
 
@@ -50,10 +51,11 @@ const Protegida = () => {
       backgroundImage: `url(${Fondo2})`,
       backgroundSize: "cover",
       display: "flex",
+      justifyContent: "center",
 
     }} >
       <div>
-        <h2>Membresia</h2>
+        <h2 className='membresia'>Membresía</h2>
         <div >
 
           <div className='redes'>

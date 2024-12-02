@@ -1,6 +1,6 @@
 require("dotenv").config();
 const bcrypt = require("bcrypt");
-const User = require("../models/userModels");
+const User = require("../models/user");
 
 // Función para crear un usuario administrador al iniciar la aplicación
 async function createAdminUser() {

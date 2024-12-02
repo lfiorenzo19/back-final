@@ -1,9 +1,15 @@
-.inicio, .tienda, .contacto {
-    text-decoration: none; 
-    color: #fff; 
-  }
-  
-  .inicio:hover, .tienda:hover, .contacto:hover {
-    text-decoration: none; 
-    color: #ccc; 
-  }
+.inicio, .tienda, .contacto, .boton{
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-size: 1.2rem !important;
+  text-decoration: none; 
+  color: #fff; 
+}
+
+.inicio:hover, .tienda:hover, .contacto:hover {
+  text-decoration: none; 
+  color: #ccc; 
+}
+
+.navbar{
+  background-color: #24272a;
+}

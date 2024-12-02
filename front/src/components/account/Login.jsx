@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await api.post('/users/login', { username, password })
+      await api.post('/users/login', { username, password });
 
       // Obtener el rol del usuario desde la respuesta
       // const { role } = response.data;
@@ -43,8 +43,8 @@ const Login = () => {
   return (
 
     <div className='login-contenedor' style={{
-      backgroundImage: `url(${fondo})`
-    }}>
+      backgroundImage:`url(${fondo})`
+          }}>
     <form className="login-form" onSubmit={handleSubmit}>
       <h2 className="login-title">Iniciar Sesión</h2>
       <div className="error-message">{errorMessage}</div>

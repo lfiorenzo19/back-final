@@ -10,8 +10,6 @@
 .novedades-section {
   padding: 20px;
   background-color: #eeeeee;
-  
-  
 }
 
 .novedades-list {
@@ -28,13 +26,19 @@
   border-radius: 5px;
 }
 
+.membresia{
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-size: 3rem;
+}
+
 .novedad-item h3 {
-  margin: 0;
-  font-size: 1.5em;
+  margin: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-size: 1.2rem !important;
 }
 
 .novedad-item p {
-  margin: 10px 0;
+  margin: 10px ;
 }
 
 .novedad-item span {
@@ -44,7 +48,7 @@
 
 button {
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 10px !important;
   background-color: #b1b3b4;
   color: #eeeeee;
   border: none;
@@ -88,6 +92,8 @@ button:hover {
   height: 410px;
   text-align: center;
   left: 70%;
- margin: 20px;
+  margin: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-size: 1rem !important;
 
 }

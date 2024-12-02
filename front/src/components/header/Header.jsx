@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../assets/images/Logo1.jpeg";
+import logo from "../../assets/images/Logo2.jpeg";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -24,7 +24,7 @@ function Header() {
 
 
   return (
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+    <Navbar  className = "navbar" expand="lg" data-bs-theme="dark" >
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -38,7 +38,7 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto clases">
-            <Nav.Link as={Link} to="/" className="inicio">
+            <Nav.Link as={Link} to="/" className="inicio" >
               Inicio
             </Nav.Link>
             <Nav.Link as={Link} to="/shop" className="tienda">
@@ -55,11 +55,11 @@ function Header() {
                 <Form.Control
                   type="text"
                   placeholder="¿Qué estás buscando?"
-                  className=" mr-sm-2"
+                  className="boton mr-sm-2 "
                 />
               </Col>
               <Col xs="auto">
-                <Button type="submit" variant="secondary">
+                <Button className="boton" type="submit" variant="secondary">
                   Buscar
                 </Button>
               </Col>
@@ -71,7 +71,7 @@ function Header() {
             <Dropdown.Toggle
               variant="secondary"
               id="dropdown-user"
-              className="ms-3"
+              className="boton ms-3"
             >
               <FaUser size={20} />
             </Dropdown.Toggle>

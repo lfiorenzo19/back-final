@@ -67,14 +67,6 @@
   .login-button:hover {
     background-color: #5a5a5a; 
   }
-
-  .error-message {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.715);
-    margin-bottom: 15px;
-    text-align: center;
-    border-radius: 2rem;
-  }
   
   
   @media (max-width: 600px) {
