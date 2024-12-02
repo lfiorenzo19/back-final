@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import api from './api';
 import fondo from '../../assets/images/fondo2.jpg';
 import './Register.css'; 
