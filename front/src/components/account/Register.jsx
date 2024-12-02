@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from './api';
 import fondo from '../../assets/images/fondo2.jpg';
-import './register.css'; 
+import './Register.css'; 
 
 const Register = () => {
   const [username, setUsername] = useState('');
