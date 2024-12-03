@@ -29,6 +29,9 @@ app.use(session({
   cookie: { secure: false }
 }));
 
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, '../front/dist')));
+
 // Rutas
 app.use('/api/productos', productsRoutes); // productos 
 app.use('/api/users', userRoutes);
@@ -40,6 +43,11 @@ mongoose.connect(process.env.MONGODB_URI)
     console.log('Conectado a MongoDB');
     userController.createAdminUser(); // Creamos el usuario admin
   }).catch(err => console.error('Error al conectar a MongoDB:', err));
+
+// Manejar rutas SPA
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../front/dist/index.html'));
+});
 
 // Iniciar el servidor
 const PORT = process.env.PORT || 5000;
