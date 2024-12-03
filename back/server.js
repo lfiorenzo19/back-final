@@ -16,7 +16,6 @@ const app = express();
 app.use(cors()); // Permite solicitudes desde diferentes orígenes
 app.use(express.json()); 
 app.use(bodyParser.json());
-app.use('/api/mail', mailRoutes);
 
 const corsOptions = {
   origin: 'https://front-final-n4aj.onrender.com/', // Reemplaza con la URL de tu frontend
@@ -40,6 +39,7 @@ app.use(session({
 // Rutas
 app.use('/api/productos', productsRoutes); // productos 
 app.use('/api/users', userRoutes);
+app.use('/api/mail', mailRoutes);
 
 // Conexión a la base de datos
 mongoose.connect(process.env.MONGODB_URI)
