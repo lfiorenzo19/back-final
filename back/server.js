@@ -1,5 +1,6 @@
 // Requerimientos
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo');
