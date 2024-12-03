@@ -8,4 +8,4 @@ export default defineConfig({
     port:10000
   },
   plugins: [react()],
-})
+});
