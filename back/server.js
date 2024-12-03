@@ -17,13 +17,6 @@ app.use(cors()); // Permite solicitudes desde diferentes orígenes
 app.use(express.json()); 
 app.use(bodyParser.json());
 
-const corsOptions = {
-  origin: 'https://front-final-n4aj.onrender.com/', // Reemplaza con la URL de tu frontend
-  optionsSuccessStatus: 200
-};
-
-app.use(cors(corsOptions));
-
 // Configuración de la sesión 
 app.use(session({
   secret: process.env.SESSION_SECRET,

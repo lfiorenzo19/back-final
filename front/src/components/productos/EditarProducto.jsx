@@ -15,7 +15,7 @@ const EditarProducto = () => {
   useEffect(() => {
     const fetchProducto = async () => {
       try {
-        const response = await fetch(`https://back-final-15jm.onrender.com/api/productos/${id}`);
+        const response = await fetch(`http://localhost:5000/api/productos/${id}`);
         const data = await response.json();
         setProducto(data);
         setNombre(data.nombre);
@@ -34,7 +34,7 @@ const EditarProducto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`https://back-final-15jm.onrender.com/api/productos/${id}`, {
+      const response = await fetch(`hhttp://localhost:5000/api/productos/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nombre, precio, descripcion, categoria, imagen }),

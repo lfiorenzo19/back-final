@@ -21,7 +21,7 @@ const CrearProducto = () => {
         categoria,
         imagen,
       };
-      await axios.post(`https://back-final-15jm.onrender.com/api/productos`, nuevoProducto);
+      await axios.post(`http://localhost:5000/api/productos`, nuevoProducto);
       navigate('/productos');
     } catch (error) {
       console.error('Error al crear el producto:', error);

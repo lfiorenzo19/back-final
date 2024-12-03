@@ -10,7 +10,7 @@ const ListaProductos = () => {
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const response = await axios.get(`https://back-final-15jm.onrender.com/api/productos`);
+        const response = await axios.get('http://localhost:5000/api/productos');
         setProductos(response.data);
       } catch (error) {
         console.error('Error al obtener los Productos:', error);
