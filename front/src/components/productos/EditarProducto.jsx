@@ -11,11 +11,12 @@ const EditarProducto = () => {
   const [categoria, setCategoria] = useState('');
   const [imagen, setImagen] = useState('');
   const navigate = useNavigate();
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     const fetchProducto = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/productos/${id}`);
+        const response = await fetch(`${backendUrl}/api/productos/${id}`);
         const data = await response.json();
         setProducto(data);
         setNombre(data.nombre);
@@ -34,7 +35,7 @@ const EditarProducto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/productos/${id}`, {
+      const response = await fetch(`${backendUrl}/api/productos/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nombre, precio, descripcion, categoria, imagen }),

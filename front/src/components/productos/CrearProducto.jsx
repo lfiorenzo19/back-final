@@ -9,7 +9,7 @@ const CrearProducto = () => {
   const [descripcion, setDescripcion] = useState('');
   const [categoria, setCategoria] = useState('');
   const [imagen, setImagen] = useState('');
-
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -22,7 +22,7 @@ const CrearProducto = () => {
         categoria,
         imagen,
       };
-      await axios.post('http://localhost:5000/api/productos', nuevoProducto);
+      await axios.post(`${backendUrl}/api/productos`, nuevoProducto);
       navigate('/productos');
     } catch (error) {
       console.error('Error al crear el producto:', error);

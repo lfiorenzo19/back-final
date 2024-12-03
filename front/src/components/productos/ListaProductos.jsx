@@ -6,11 +6,12 @@ import './ListaProductos.css';
 
 const ListaProductos = () => {
   const [productos, setProductos] = useState([]);
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/productos');
+        const response = await axios.get(`${backendUrl}/api/productos`);
         setProductos(response.data);
       } catch (error) {
         console.error('Error al obtener los Productos:', error);
