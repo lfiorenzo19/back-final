@@ -7,12 +7,11 @@ const DetalleProducto = () => {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
   const navigate = useNavigate();
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     const fetchProducto = async () => {
       try {
-        const response = await fetch(`${backendUrl}/api/productos/${id}`);
+        const response = await fetch(`https://back-final-15jm.onrender.com/api/productos/${id}`);
         const data = await response.json();
         setProducto(data);
       } catch (error) {
@@ -26,7 +25,7 @@ const DetalleProducto = () => {
   const handleDelete = async () => {
     if (window.confirm('¿Estás seguro de eliminar este producto?')) {
       try {
-        const response = await fetch(`${backendUrl}/api/productos/${id}`, {
+        const response = await fetch(`https://back-final-15jm.onrender.com}/api/productos/${id}`, {
           method: 'DELETE',
         });
         if (response.ok) {

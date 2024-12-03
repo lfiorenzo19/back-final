@@ -6,12 +6,11 @@ import './ListaProductos.css';
 
 const ListaProductos = () => {
   const [productos, setProductos] = useState([]);
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const response = await axios.get(`${backendUrl}/api/productos`);
+        const response = await axios.get(`https://back-final-15jm.onrender.com/api/productos`);
         setProductos(response.data);
       } catch (error) {
         console.error('Error al obtener los Productos:', error);
@@ -24,7 +23,6 @@ const ListaProductos = () => {
   return (
     <div className='lista-contenedor'>
       <h2>Listado de Productos</h2>
-     
       <ul>
         {productos.map((producto) => (
           <li key={producto._id}>
